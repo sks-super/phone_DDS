@@ -30,7 +30,14 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
-    sourceSets["main"].jniLibs.srcDir("lib/jni")
+    android {
+    sourceSets {
+        named("main") {
+            jniLibs.srcDirs("src/main/jniLibs")
+        }
+    }
+}
+
 dependencies {
 
     implementation(libs.appcompat)
