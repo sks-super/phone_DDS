@@ -30,13 +30,14 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
-
+    sourceSets["main"].jniLibs.srcDir("lib/jni")
 dependencies {
 
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(files("lib\\ZRDDSd.jar"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
